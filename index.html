@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/Profile.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js" defer></script>
     <script src="./js/script.js" defer></script>
     <title>Habits-FC</title>
 </head>
@@ -19,11 +20,11 @@
 
         <button>
             <img src="./images/plus.svg" alt="Ícone sinal de + roxo" />
-            Registrar o meu dia
+            <div>Registrar o meu dia</div>
         </button>
     </header>
 
-    <form action="">
+    <form id="form-habits">
         <div class="habits">
             <div class="habit">🏃</div>
             <div class="habit">💧</div>
@@ -37,7 +38,9 @@
                 <input type="checkbox" name="water" />
                 <input type="checkbox" name="food" />
             </div>
-
+        </div>
+        
+        <div class="days">
             <div class="day">
                 <div>04/01</div>
                 <input type="checkbox" name="run" />
