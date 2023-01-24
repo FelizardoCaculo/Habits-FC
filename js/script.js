@@ -1,3 +1,9 @@
+let userName = ''
+while (userName === '' || userName === null || window.onload) {
+    userName = prompt('Por favor, escreva aqui o seu nome: ');
+    JSON.stringify(userName).toUpperCase();
+}
+
 const form = document.querySelector('#form-habits');
 const nlwSetup = new NLWSetup(form);
 const button = document.querySelector('header button');
@@ -10,10 +16,10 @@ function add() {
     const dayExists = nlwSetup.dayExists(today);
 
     if (dayExists === true) {
-        alert('Atenção! este dia ja foi resistado 🚫');
+        alert(`Atenção ${userName}! este dia ja foi resistado 🚫`);
         return;
     } else {
-        alert('Dia registado com sucesso ✅');
+        alert(`Olá ${userName}!, seu registado com sucesso ✅`);
     }
 
     nlwSetup.addDay(today);
@@ -24,7 +30,6 @@ function save() {
 }
 
 const data = JSON.parse(localStorage.getItem('NLWSetup@habits')) || {};
-console.log(data)
 
 nlwSetup.setData(data);
 nlwSetup.load();
